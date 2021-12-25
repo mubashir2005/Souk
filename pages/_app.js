@@ -17,6 +17,11 @@ function MyApp({ Component, pageProps }) {
             <Link href={'/assets'}>
       <a className='mr-6 text-pink-500'>My assets</a>
       </Link>
+      <Link href="/creator-dashboard">
+            <a className="mr-6 text-pink-500">
+              Creator Dashboard
+            </a>
+          </Link>
     </nav>
     <Component {...pageProps} />
     </div>
