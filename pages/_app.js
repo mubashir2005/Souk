@@ -1,30 +1,12 @@
-import Link from 'next/link'
 import '../styles/globals.css'
 import 'tailwindcss/tailwind.css'
+import { MoralisProvider } from "react-moralis";
 
 function MyApp({ Component, pageProps }) {
   return(
-    <div>
-    <nav className='border-b p-6'>
-      <p className='text-4xl font-bold '>Souk NFT</p>
-      <div className='flex mt-4'></div>
-      <Link href={'/home'}>
-      <a className='mr-6 text-pink-500'>Home</a>
-      </Link>
-            <Link href={'/sell'}>
-      <a className='mr-6 text-pink-500'>Sell</a>
-      </Link>
-            <Link href={'/assets'}>
-      <a className='mr-6 text-pink-500'>My assets</a>
-      </Link>
-      <Link href="/creator-dashboard">
-            <a className="mr-6 text-pink-500">
-              Creator Dashboard
-            </a>
-          </Link>
-    </nav>
+<MoralisProvider appId="yP1JbFgKNjB0K1twWpQNZ8uP03vUV5xg6g8Y9kRY" serverUrl="https://re4hj6vykohs.usemoralis.com:2053/server">
     <Component {...pageProps} />
-    </div>
+  </MoralisProvider>
   ) 
 }
 
